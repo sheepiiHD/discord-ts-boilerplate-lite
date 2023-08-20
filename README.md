@@ -6,7 +6,7 @@ Setup:
 3. Open terminal, type `npm i -g ts-node`
 4. Navigate to the folder of your this bot, type `npm start`
 
-##Creating Commands
+## Creating Commands
 > Make a file named something.ts in the `commands/` folder. Name doesn't matter, but it should be informative.
 ```typescript
 // Command with a crap ton of options, you can choose which ones you want. 
@@ -63,7 +63,7 @@ export const execute = async (client: Client, commandName: string, interaction: 
 };
 ```
 
-##Creating Events
+## Creating Events
 > Make a file named eventNameHere.ts in the `events/` folder. ie. **voiceStateUpdate.ts**. you can find a list of events [here](https://old.discordjs.dev/#/docs/discord.js/v13/typedef/Events). 
 ```typescript
 import {Client, VoiceState} from "discord.js";
@@ -81,7 +81,7 @@ export default (client: Client) => {
 };
 ```
 
-##Creating Interactions
+## Creating Interactions
 > Make a file named whatever.ts in the `interactions/` folder. It is important that you put it in the right folder. If it's a button, put it in the button folder. etc.  
 ```typescript
 import {ButtonInteraction, Client, Interaction} from "discord.js";

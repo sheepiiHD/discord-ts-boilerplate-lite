@@ -99,7 +99,6 @@ const execute = async(client: Client, interaction: ButtonInteraction) => {
     ephemeral: true
   }).expireInteractionResponse(5000);
 }
-
 ```
 
 If you have questions about something here, I'm on [Lucid City Discord](https://discord.gg/lucidcity), my name is Sheepii.

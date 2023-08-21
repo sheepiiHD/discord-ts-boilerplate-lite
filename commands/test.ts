@@ -3,7 +3,7 @@ import {Client, CommandInteraction, User} from "discord.js";
 
 export const data = new SlashCommandBuilder()
   .setName('test')
-  .setDescription('Setup the whitelist server bot')
+  .setDescription('test command')
   .toJSON()
 
 export const execute = async (client: Client, commandName: string, interaction: CommandInteraction | any) => {

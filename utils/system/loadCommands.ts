@@ -6,18 +6,22 @@ import config from "../../configuration/config";
 import {Client} from "discord.js";
 
 const commandsDir = path.join(__dirname, '..', '..', 'commands');
+export async function refreshApplicationCommands(client: Client) {
 
-export async function refreshApplicationCommands() {
+  // Ensure the client is ready and has a user object
+  if (!client.user) {
+    console.error("Client is not ready or doesn't have a user object");
+    return;
+  }
+
+  const clientID = client.user.id;
 
   // Read command files
   const commandFiles = readdirSync(commandsDir).filter(file => file.endsWith('.ts'));
-
   const commands = [];
 
-  // Import command data from each file and add to commands array
   for (const file of commandFiles) {
-
-    const command = await import(commandsDir + '\\' + file);
+    const command = await import(path.join(commandsDir, file));
     commands.push(command.data);
   }
 
@@ -25,7 +29,7 @@ export async function refreshApplicationCommands() {
 
   try {
     await rest.put(
-      Routes.applicationCommands(config.clientID),
+      Routes.applicationCommands(clientID),
       {body: commands},
     );
 

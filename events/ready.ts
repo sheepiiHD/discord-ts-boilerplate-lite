@@ -5,7 +5,7 @@ export default (client: Client) => {
   client.once('ready', async() => {
 
     //Refresh commands, so they're always up to date :)
-    await refreshApplicationCommands();
+    await refreshApplicationCommands(client);
 
     console.log(`Logged in as ${client.user?.tag}!`);
   });

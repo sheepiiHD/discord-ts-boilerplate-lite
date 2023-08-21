@@ -1,10 +1,11 @@
 Hello, welcome to my boilerplate bot that I use, and have created myself.
 
 Setup:
-1. Go to configuration/secrets.ts and put your [bot token](https://discord.com/developers/applications/). Also **important**: enable all intents.
-2. Download and install [Node Package Manager](https://nodejs.org/en/download).
+1. Go to configuration/secrets.ts and put your [bot token](https://discord.com/developers/applications/). Also **important**: enable all intents
+2. Download and install [Node Package Manager](https://nodejs.org/en/download)
 3. Open terminal, type `npm i -g ts-node`
-4. Navigate to the folder of your this bot, type `npm start`
+4. Navigate to the folder of your this bot, type `npm i && npm start`
+5. Once you've installed the dependencies `npm i`, you can now just do `npm start`
 
 ## Creating Commands
 > Make a file named something.ts in the `commands/` folder. Name doesn't matter, but it should be informative.

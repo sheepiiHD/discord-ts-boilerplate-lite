@@ -91,7 +91,9 @@ export const interactionName = 'this-is-your-customId'
 const execute = async(client: Client, interaction: ButtonInteraction) => {
   
   // This added on an experimental function that I created, which deletes the message after 5000ms (5 seconds). 
-  // You can add this to the end of interactions, to delete them after some time. 
+  // You can add this to the end of interactions, to delete them after some time. It's important to note
+  // that I created this, and it may have consequences using it, I just haven't run into them yet. 
+  // You can find these in the loadPrototypes.ts
   await interaction.reply({
     content: 'hello world!',
     ephemeral: true

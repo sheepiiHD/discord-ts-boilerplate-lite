@@ -38,7 +38,7 @@ export const data = new SlashCommandBuilder()
       .setDescription('Mention a user, role or channel'))
   .toJSON();
 
-export const execute = async (client: Client, commandName: string, interaction: CommandInteraction | any) => {
+export const execute = async (client: Client, interaction: CommandInteraction | any) => {
   const user = interaction.user as User;
 
   // Retrieve the options
